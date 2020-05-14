@@ -15,10 +15,12 @@ class ViewController: UIViewController {
     var secondsRemaining = 60
     var timer = Timer()
     @IBOutlet weak var mainTitle: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
 
         timer.invalidate()
+        progressBar.progress = 1
         
         let hardness = sender.currentTitle!
         secondsRemaining = eggTime[hardness]!
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
     
     @objc func updateTimer() {
         if secondsRemaining > 0 {
+            mainTitle.text = "How do you like your eggs?"
             print("\(secondsRemaining) 이 남았습니다")
             secondsRemaining -= 1
         } else {

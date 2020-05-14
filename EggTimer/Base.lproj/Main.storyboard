@@ -120,6 +120,18 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U0l-Qy-Oie">
+                                                <rect key="frame" x="0.0" y="122" width="374" height="2"/>
+                                                <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" red="0.85499429702758789" green="0.95852416753768921" blue="0.88477414846420288" alpha="0.9998168945" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="U0l-Qy-Oie" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="C0n-Qc-cf5"/>
+                                            <constraint firstItem="U0l-Qy-Oie" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="e0N-qI-3mr"/>
+                                            <constraint firstAttribute="trailing" secondItem="U0l-Qy-Oie" secondAttribute="trailing" id="loR-0O-eE4"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -135,6 +147,7 @@
                     </view>
                     <connections>
                         <outlet property="mainTitle" destination="XLm-5r-pSP" id="gM7-JB-JN2"/>
+                        <outlet property="progressBar" destination="U0l-Qy-Oie" id="8vQ-pW-ywd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
